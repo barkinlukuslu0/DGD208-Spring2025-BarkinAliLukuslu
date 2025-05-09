@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace DGD208_Spring2025_BarkinAliLukuslu
+namespace DGD208_Spring2025_BarkınAliLüküslü
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Game game = new Game();
+            await game.GameLoop();
         }
     }
 }

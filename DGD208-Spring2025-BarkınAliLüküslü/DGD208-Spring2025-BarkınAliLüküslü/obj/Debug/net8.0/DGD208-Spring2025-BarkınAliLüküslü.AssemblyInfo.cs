@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DGD208-Spring2025-BarkınAliLüküslü")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0252bf04c99177c39f9b231cdb81d72669a8a80")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c68e9ab8e56daa3d0fc2f254f1b2d5199d385d30")]
 [assembly: System.Reflection.AssemblyProductAttribute("DGD208-Spring2025-BarkınAliLüküslü")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DGD208-Spring2025-BarkınAliLüküslü")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
