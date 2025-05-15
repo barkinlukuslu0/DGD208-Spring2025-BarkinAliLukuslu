@@ -6,6 +6,9 @@ namespace DGD208_Spring2025_BarkýnAliLüküslü
     {
         private bool _isRunning;
 
+        /// List of pets that the player has been adopted
+        private List<Pet> _pets = new List<Pet>();
+
         public async Task GameLoop()
         {
             // Initialize the game
@@ -35,8 +38,9 @@ namespace DGD208_Spring2025_BarkýnAliLüküslü
             // Use this to display appropriate menu and get user inputs
 
             Console.Clear();
-            Console.WriteLine("1. View Pets");
-            Console.WriteLine("2. Use Item on Pet");
+            Console.WriteLine("1. Adopt a Pet");
+            Console.WriteLine("2. View Pets");
+            Console.WriteLine("3. Use Item on a Pet");
             Console.WriteLine("9. Credits");
             Console.WriteLine("0. Exit");
             Console.Write("Your choice: ");
@@ -52,6 +56,25 @@ namespace DGD208_Spring2025_BarkýnAliLüküslü
             {
                 _isRunning = false;
             }
+
+            else if (choice == "1")
+            {
+                await AdoptPet();
+            }
+
+            else if (choice == "2")
+            {
+                ShowPets();
+            }
+
+            else if (choice == "3")
+            {
+                //this feature will add
+
+                //await UseItemOnPet();
+                return;
+            }
+
             else if (choice == "9")
             {
                 // Display credits
@@ -62,6 +85,18 @@ namespace DGD208_Spring2025_BarkýnAliLüküslü
                 //if user press any key the game will continue
                 GetUserInput();
             }
+        }
+
+        private async Task AdoptPet()
+        {
+            var adopter = new AdoptPet(_pets);
+            await adopter.AdoptAsync();
+        }
+
+        private void ShowPets()
+        {
+            var shower = new ShowPets(_pets);
+            shower.Display();
         }
     }
 }
