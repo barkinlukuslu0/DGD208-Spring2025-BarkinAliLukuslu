@@ -1,6 +1,6 @@
-using System;
+ï»¿using System;
 
-namespace DGD208_Spring2025_BarkýnAliLüküslü
+namespace DGD208_Spring2025_BarkÄ±nAliLÃ¼kÃ¼slÃ¼
 {
     public class Game
     {
@@ -78,7 +78,8 @@ namespace DGD208_Spring2025_BarkýnAliLüküslü
             else if (choice == "9")
             {
                 // Display credits
-                Console.WriteLine("This game created by Barkýn Ali Lüküslü");
+                Console.Clear();
+                Console.WriteLine("This game created by BarkÄ±n Ali LÃ¼kÃ¼slÃ¼");
                 Console.WriteLine("Press any key to return...");
                 Console.ReadKey();
 
@@ -91,6 +92,20 @@ namespace DGD208_Spring2025_BarkýnAliLüküslü
         {
             var adopter = new AdoptPet(_pets);
             await adopter.AdoptAsync();
+
+            var latestPet = _pets.LastOrDefault();
+            if (latestPet != null)
+            {
+                latestPet.OnPetDied += HandlePetDeath;
+                _ = latestPet.StartLifecycleAsync();
+            }
+        }
+
+        private void HandlePetDeath(Pet pet)
+        {
+            _pets.Remove(pet);
+            Console.WriteLine($"\n\n\n Notify: Sadly, your pet {pet.Name} has died due to neglect.");
+            Console.ReadKey();
         }
 
         private void ShowPets()
