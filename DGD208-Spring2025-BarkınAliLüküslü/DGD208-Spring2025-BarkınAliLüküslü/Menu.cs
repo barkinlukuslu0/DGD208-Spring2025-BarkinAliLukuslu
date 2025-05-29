@@ -1,6 +1,6 @@
 using System;
 
-namespace DGD208_Spring2025_BarkýnAliLüküslü
+namespace DGD208_Spring2025_BarkinAliLukuslu
 {
     /// <summary>
     /// A generic menu system that can display a list of items and get user selection.

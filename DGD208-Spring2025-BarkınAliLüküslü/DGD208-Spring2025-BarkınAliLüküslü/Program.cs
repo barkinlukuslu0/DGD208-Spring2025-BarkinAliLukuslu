@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DGD208_Spring2025_BarkınAliLüküslü
+namespace DGD208_Spring2025_BarkinAliLukuslu
 {
     class Program
     {

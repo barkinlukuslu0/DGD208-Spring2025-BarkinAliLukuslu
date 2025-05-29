@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DGD208_Spring2025_BarkýnAliLüküslü
+namespace DGD208_Spring2025_BarkinAliLukuslu
 {
     public class ShowPets
     {
